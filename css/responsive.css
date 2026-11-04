@@ -1,0 +1,90 @@
+/* ===== PART 8: Responsive layout (tablet and mobile) ===== */
+
+/* Tablet: 2 product columns, smaller hero */
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .hero {
+    min-height: 460px;
+  }
+
+  .hero h1 {
+    font-size: 2.6rem;
+  }
+
+  .hero-badge {
+    width: 110px;
+    height: 110px;
+  }
+
+  .hero-badge strong {
+    font-size: 1.8rem;
+  }
+}
+
+/* Mobile: nav drops to its own scrollable row under the brand */
+@media (max-width: 700px) {
+  .header .container {
+    flex-wrap: wrap;
+    height: auto;
+    padding-top: 12px;
+    padding-bottom: 0;
+  }
+
+  .nav {
+    order: 3;                  /* move below brand and icons */
+    width: 100%;
+    gap: 22px;
+    overflow-x: auto;
+    padding: 10px 0;
+    white-space: nowrap;
+  }
+
+  .hero-badge {
+    display: none;             /* keeps the small screen uncluttered */
+  }
+
+  .section {
+    padding-top: 50px;
+  }
+
+  .section-head h2 {
+    font-size: 1.7rem;
+  }
+
+  .grid {
+    gap: 14px;
+  }
+
+  .card-info {
+    padding: 12px;
+  }
+
+  /* Touch screens have no hover, so keep the Add to Bag button visible */
+  .overlay {
+    transform: translateY(0);
+    padding: 8px;
+    font-size: 0.75rem;
+  }
+}
+
+/* Very small phones: 1 column */
+@media (max-width: 380px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 2.1rem;
+  }
+}
