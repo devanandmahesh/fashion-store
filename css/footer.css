@@ -1,0 +1,61 @@
+/* ===== PART 7: Footer ===== */
+
+.footer {
+  margin-top: 80px;
+  padding-top: 60px;
+  border-top: 1px solid var(--line);
+  background: var(--card);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
+  gap: 32px;
+}
+
+.footer h4 {
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.footer p,
+.footer a {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+
+.footer a:hover {
+  color: var(--accent);
+}
+
+/* Newsletter form */
+.newsletter {
+  display: flex;
+  gap: 8px;
+}
+
+.newsletter input {
+  flex: 1;
+  min-width: 0;
+  padding: 12px;
+  background: var(--bg);
+  color: var(--text);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  font-family: inherit;
+}
+
+.newsletter .btn {
+  padding: 12px 20px;
+}
+
+.copyright {
+  text-align: center;
+  padding: 24px 20px;
+  margin-top: 40px;
+  border-top: 1px solid var(--line);
+}
