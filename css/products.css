@@ -1,0 +1,92 @@
+/* ===== PART 4 & 6: Product sections, grid, cards, badges, hover effects ===== */
+
+/* ---------- Sections (Part 4) ---------- */
+.section {
+  padding: 70px 0 10px;
+}
+
+.section-head {
+  margin-bottom: 32px;
+}
+
+.section-head h2 {
+  font-size: 2.2rem;
+}
+
+.section-head p {
+  color: var(--muted);
+}
+
+/* Product grid: 4 equal columns on desktop */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+/* ---------- Card (Part 4) ---------- */
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card-img {
+  position: relative;          /* parent for badge, heart and overlay button */
+  overflow: hidden;
+  aspect-ratio: 4 / 5;         /* every image has the same shape */
+}
+
+.card-img img {
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.card-info {
+  padding: 16px;
+}
+
+.category {
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.card-info h3 {
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 4px 0;
+}
+
+.rating {
+  font-size: 0.8rem;
+  color: var(--accent);
+}
+
+.rating span {
+  color: var(--muted);
+}
+
+.price {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-top: 6px;
+}
+
+.price s {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: var(--muted);
+  margin-left: 6px;
+}
+
+.sizes {
+  font-size: 0.75rem;
+  color: var(--muted);
+  margin-top: 4px;
+}
