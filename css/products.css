@@ -90,3 +90,83 @@
   color: var(--muted);
   margin-top: 4px;
 }
+
+/* ---------- Badges, wishlist heart, overlay button (Part 6) ---------- */
+.badge {
+  position: absolute;          /* placed on top of the image, top-left */
+  top: 12px;
+  left: 12px;
+  z-index: 2;
+  padding: 4px 10px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  border-radius: 4px;
+  background: var(--accent);
+  color: var(--on-accent);
+}
+
+.badge.new {
+  background: var(--text);
+  color: var(--bg);
+}
+
+/* Wishlist heart: a hidden checkbox, so it toggles without JavaScript */
+.wish {
+  position: absolute;          /* top-right of the image */
+  top: 10px;
+  right: 10px;
+  z-index: 2;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  color: #1c1c1c;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.wish input {
+  display: none;
+}
+
+.wish span::before {
+  content: "\2661";            /* empty heart */
+}
+
+.wish input:checked + span::before {
+  content: "\2665";            /* filled heart */
+  color: #dc2626;
+}
+
+/* "Add to Bag" button that slides up over the image on hover */
+.overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 14px;
+  text-align: center;
+  font-size: 0.85rem;
+  font-weight: 600;
+  background: rgba(0, 0, 0, 0.8);
+  color: #ffffff;
+  transform: translateY(100%); /* hidden below the image */
+  transition: transform 0.3s;
+}
+
+/* Hover effects */
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+}
+
+.card:hover .card-img img {
+  transform: scale(1.08);
+}
+
+.card:hover .overlay {
+  transform: translateY(0);
+}
